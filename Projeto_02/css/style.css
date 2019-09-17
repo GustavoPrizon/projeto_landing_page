@@ -143,6 +143,42 @@ section.cover-form{
     font-weight: normal;
 }
 
+.flex-mosaico{
+    display: flex;
+    margin-top: 5px;
+}
+
+.flex-mosaico-left{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 5px;
+}
+
+.item-1{
+    background-position: center;
+    background-size: cover;
+    width: 60%;
+}
+
+.item-2{
+    width: 40%;
+    padding: 60px 40px;
+    background-color: #9cc2f8;
+}
+
+footer{
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p{
+    margin-top: 8px;
+}
+
+footer img{
+    width: 120px;
+}
+
 @media screen and (max-width: 960px){
     .bg{
         height: auto;
@@ -155,6 +191,23 @@ section.cover-form{
         max-width: 400px;
         position: static;
         display: inline-block;
+    }
+}
+
+@media screen and (max-width: 720px){
+    .flex-mosaico{
+        display: block;
+    }
+    .flex-mosaico-left{
+        display: block;
+    }
+    .item-1{
+        width: 100%;
+        padding-top: 80%;
+    }
+    .item-2{
+        text-align: justify;
+        width: 100%;
     }
 }
 
