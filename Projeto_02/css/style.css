@@ -62,12 +62,15 @@ section.cover-form{
 
 .form-container{
     position: absolute;
+    z-index: 2;
     right: 30px;
     top: -5%;
     width: 400px;
     height: 110%;
     background-color: #FFF;
     box-shadow: 2px 2px 2px 1px rgba(160,160,160,0.8);
+    -webkit-box-shadow: 2px 2px 2px 1px rgba(160,160,160,0.8);
+    -moz-box-shadow: 2px 2px 2px 1px rgba(160,160,160,0.8);
 }
 
 .form-container h2{
@@ -116,11 +119,25 @@ section.cover-form{
 }
 
 .content{
+    z-index: 1;
     width: 100%;
     text-align: center;
+    position: relative;
 }
 
-.content .container{
+.arrow{
+    position: absolute;
+    left: 50%;
+    top: -32px;
+    transform: translateX(-50%);
+    -ms-transform:translateX(-50%);
+    width: 64px;
+    height: 64px;
+    background-size: 100% 100%;
+    background-image: url('../imagens/arrow.png');
+}
+
+section.content div.container{
     background-color: #29526d;
     padding: 60px 0px 40px 0px;
 }
@@ -167,8 +184,14 @@ section.cover-form{
 }
 
 footer{
+    margin-top: 5px;
+    display: block;
+}
+
+footer .container{
     text-align: center;
     padding: 20px 0;
+    background-color: rgb(230,230,230);
 }
 
 footer p{
@@ -177,6 +200,19 @@ footer p{
 
 footer img{
     width: 120px;
+}
+
+.form-container{
+    animation-name: fade;
+    animation-duration: 1s;
+}
+
+@keyframes fade{
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
 }
 
 @media screen and (max-width: 960px){
